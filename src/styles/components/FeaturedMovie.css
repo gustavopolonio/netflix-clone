@@ -1,136 +1,135 @@
 .featuredMovieContainer {
-    height: 100vh;
-
+  height: 100vh;
 }
 
 .uiX {
-    width: inherit;
-    height: inherit;
-    background: linear-gradient(to right, #111 35%, transparent 65%);
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to right, #111 35%, transparent 65%);
 }
 
 .uiY {
-    width: inherit;
-    height: inherit;
-    background: linear-gradient(to top, #111 7%, transparent 55%);
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to top, #111 7%, transparent 55%);
 }
 
 .featuredMovieDataContainer {
-    height: inherit;
-    width: 38%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 48px;
-    margin-top: -26px;
+  height: inherit;
+  width: 38%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 48px;
+  margin-top: -26px;
 }
 
 .featuredMovieDataContainer h2 {
-    font-size: 3.75rem;
-    line-height: 3.4rem;
+  font-size: 3.75rem;
+  line-height: 3.4rem;
 }
 
 .subTitleContainer {
-    display: flex;
-    align-items: center;
-    padding-top: 8px;
-    font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  padding-top: 8px;
+  font-size: 1.2rem;
 }
 
 .voteAverage {
-    color: #46d369;
+  color: #46d369;
 }
 
 .releaseDate {
-    padding: 0 1.2rem;
+  padding: 0 1.2rem;
 }
 
 .descriptionContainer {
-    margin: 1.2rem 0rem;
-    font-size: 1.3rem;
-    color: var(--grey);
-    font-weight: 500;
+  margin: 1.2rem 0rem;
+  font-size: 1.3rem;
+  color: var(--grey);
+  font-weight: 500;
 }
 
 .buttonsContainer {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .buttonsContainer button {
-    border: none;
+  border: none;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    color: white;
-    font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: 0.1rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
 
-    padding: 0.6rem 1.4rem;
-    border-radius: 0.2rem;
-    
-    transition: all ease 0.2s;
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.2rem;
+  
+  transition: all ease 0.2s;
 }
 
 .playButton {
-    background: var(--red);
-    margin-right: 1rem;
-    transition: all 0.2s;
+  background: var(--red);
+  margin-right: 1rem;
+  transition: all 0.2s;
 }
 
 .playButton:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .buttonsContainer .favoriteButton {
-    border: 1px solid var(--grey);
-    margin-right: 1.4rem;
-    background: black;
-    transition: all 0.2s;
+  border: 1px solid var(--grey);
+  margin-right: 1.4rem;
+  background: black;
+  transition: all 0.2s;
 }
 
 .favoriteButton:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .likeContainer,
 .unLikeContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    border-radius: 50%;
-    border: 1.6px solid white;
+  border-radius: 50%;
+  border: 1.6px solid white;
 
-    padding: 0.5rem;
-    margin-right: 0.6rem;
-    
-    cursor: pointer;
-    transition: all ease 0.2s;
+  padding: 0.5rem;
+  margin-right: 0.6rem;
+  
+  cursor: pointer;
+  transition: all ease 0.2s;
 }
 
 .likeContainer:hover,
 .unLikeContainer:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .buttonsContainer .like,
 .buttonsContainer .unlike {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 
 .genres {
-    margin-top: 1rem;
-    display: flex;
-    font-size: 1.1rem;
-    color: var(--grey);
+  margin-top: 1rem;
+  display: flex;
+  font-size: 1.1rem;
+  color: var(--grey);
 }
 
 .genresName {
-    margin-left: 0.3rem;
-    font-size: 1.1rem;
-    color: var(--grey);
+  margin-left: 0.3rem;
+  font-size: 1.1rem;
+  color: var(--grey);
 }

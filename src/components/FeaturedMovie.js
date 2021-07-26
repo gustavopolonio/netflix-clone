@@ -1,4 +1,3 @@
-import '../styles/components/FeaturedMovie.css';
 import React from 'react';
 
 import ThumbUpOutlinedIcon from '@material-ui/icons/ThumbUpOutlined';
@@ -6,9 +5,9 @@ import ThumbDownOutlinedIcon from '@material-ui/icons/ThumbDownOutlined';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import AddIcon from '@material-ui/icons/Add';
 
-export function FeaturedMovie({featuredData}) {
-	// console.log(featuredData)
+import '../styles/components/FeaturedMovie.css';
 
+export function FeaturedMovie({ featuredData }) {
 	let title = featuredData.name;
 	let voteAverage = featuredData.vote_average;
 	let releaseDate = featuredData.first_air_date;
@@ -30,7 +29,7 @@ export function FeaturedMovie({featuredData}) {
 			backgroundRepeat: 'no-repeat'
 		}}>
 			<div className="uiX">
-				<div className="uiY"> 
+				<div className="uiY">
 					<div className="featuredMovieDataContainer">
 						<h2>
 							{title}
@@ -66,6 +65,7 @@ export function FeaturedMovie({featuredData}) {
 								<PlayArrowIcon style={{paddingRight:"0.2rem", fontSize: "1.8rem"}}/>
 								ASSISTIR
 							</button>
+
 							<button className="favoriteButton">
 								<AddIcon style={{paddingRight: "0.2rem", fontSize: "1.8rem"}}/>
 								FAVORITAR
@@ -95,9 +95,5 @@ export function FeaturedMovie({featuredData}) {
 			</div>
 		</section>
 	)
-        
-
-
-
 }
 

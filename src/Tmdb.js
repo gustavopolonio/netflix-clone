@@ -13,7 +13,6 @@ async function requestApi(endpoint) {
 export async function getHomeList() {
 
 	return [
-
 		{
 			title: "Séries mais vistas",
 			slug: "mostSeenTvShow",

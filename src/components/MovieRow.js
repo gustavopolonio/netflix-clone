@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import '../styles/components/MovieRow.css';
 
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
+import '../styles/components/MovieRow.css';
 
-export function MovieRow({title, list}) {
+export function MovieRow({ title, list }) {
 
 	let moviesLength = list.results.length;
 	const [scrollX, setScrollX] = useState(0);
 
 	function handleNavigateBack() {
 		let x = scrollX + Math.round(window.innerWidth - 280)
-		if(x > 0) {
+		if (x > 0) {
 			x = 0
 		}
 
@@ -26,7 +26,6 @@ export function MovieRow({title, list}) {
 			x = (window.innerWidth - moviesLength*150) - 60
 		}
 
-
 		setScrollX(x)
 	}
 
@@ -38,12 +37,12 @@ export function MovieRow({title, list}) {
 			</h2>
 			<div className="filmListAreaScreen">
 
-				<div className="navigateBack" onClick={handleNavigateBack}>
-					<ArrowBackIosIcon style={{fontSize: "40", marginLeft: "15"}}/>
+				<div className="navigateBack" onClick={ handleNavigateBack }>
+					<ArrowBackIosIcon style={{ fontSize: "40", marginLeft: "15" }}/>
 				</div>
 
 				<div className="navigateFront" onClick={handleNavigateFront}>
-					<ArrowForwardIosIcon style={{fontSize: "40"}}/>
+					<ArrowForwardIosIcon style={{ fontSize: "40" }}/>
 				</div>
 				
 				<div 

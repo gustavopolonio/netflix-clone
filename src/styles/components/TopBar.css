@@ -1,93 +1,93 @@
 .topBarContainer {
-    position: fixed;
-    height: 48px;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 16px 48px;
+  position: fixed;
+  height: 48px;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 48px;
 
-    background: black;
+  background: black;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    z-index: 999;
+  z-index: 999;
 }
 
 .leftContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .netflixLogo {
-    width: 112px;
-    padding-top: 4px;
+  width: 112px;
+  padding-top: 4px;
 
-    transition: 0.2s;
+  transition: 0.2s;
 }
 
 .topBarPagesContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;    
+  display: flex;
+  align-items: center;
+  justify-content: center;    
 
-    margin-left: 56px;
+  margin-left: 56px;
 }
 
 .topBarPagesContainer a {
-    padding-right: 1.4rem;
-    color: var(--grey);
+  padding-right: 1.4rem;
+  color: var(--grey);
 
-    cursor: pointer;
-    transition: 0.2s;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .rightContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .searchContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    border: 1px solid var(--grey);
-    padding: 3px;
-    margin-right: 36px;
+  border: 1px solid var(--grey);
+  padding: 3px;
+  margin-right: 36px;
 }
 
 .searchContainer input {
-    background: black;
-    color: white;
-    border: none;
+  background: black;
+  color: white;
+  border: none;
 
-    padding-left: 6px;
-    margin: 0 3px;
+  padding: 0 8px;
+  margin: 0 3px;
 }
 
 .searchIcon,
 .closeIcon,
 .arrowDropDownIcon {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .notificationIcon {
-    margin-right: 24px;
-    cursor: pointer;
+  margin-right: 24px;
+  cursor: pointer;
 }
 
 .avatarContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .avatarContainer img {
-    width: 2rem;
+  width: 2rem;
 }
 
 .netflixLogo:hover,
@@ -96,5 +96,5 @@
 .closeIcon:hover,
 .notificationIcon:hover,
 .arrowDropDownIcon:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
