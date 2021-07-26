@@ -3,6 +3,9 @@ import CloseIcon from '@material-ui/icons/Close';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
+import netflixLogoImg from '../assets/netflix-logo.svg';
+import netflixAvatarImg from '../assets/netflix-avatar.png';
+
 import '../styles/components/TopBar.css';
 
 
@@ -13,7 +16,7 @@ export function TopBar() {
       <div className="leftContainer">
           
         <a href="/">
-          <img src="netflix-logo.svg" alt="Netflix logo" className="netflixLogo"/>
+          <img src={netflixLogoImg} alt="Netflix logo" className="netflixLogo"/>
         </a>
         
         <div className="topBarPagesContainer">
@@ -35,7 +38,7 @@ export function TopBar() {
         <NotificationsIcon className="notificationIcon"style={{transition: "0.2s"}}/>
         
         <div className="avatarContainer">
-          <img src="netflix-avatar.png" alt="Avatar"/>
+          <img src={netflixAvatarImg} alt="Avatar"/>
           <ArrowDropDownIcon className="arrowDropDownIcon" style={{transition: "0.2s"}}/>
         </div>
       </div>
