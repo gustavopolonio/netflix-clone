@@ -24,7 +24,7 @@ Feel free to use the E-collect as you wish, either to study or make improvemente
 
 # :rocket: Features 
 - :blue_book: The [The movie db API](https://www.themoviedb.org/documentation/api) provides all the films and tv shows information.
-- :office: You can scroll the film lists clicking int he arrow left and right.
+- :office: You can scroll the film lists clicking in the arrow left and right.
 
 # :construction_worker: How to Use
 
@@ -49,7 +49,7 @@ $ yarn start
 
 # :computer: Technologies
 
-* [ReactJs](https://reactjs.org/) with [Create React App](https://create-react-app.dev/)
+* [ReactJS](https://reactjs.org/) with [Create React App](https://create-react-app.dev/)
 * [Material UI Icons](https://material-ui.com/pt/components/icons/)
 * [Firebase hosting](https://firebase.google.com/docs/hosting)
 * [VSCode](https://code.visualstudio.com/)
