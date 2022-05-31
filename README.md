@@ -20,7 +20,7 @@ CloneFlix is a web Netflix clone with details very similar to the original platf
 This project is part of my personal portfolio, so I would appreciate if you provide me any feedback about the ideia, code, structure or anything you could 
 report to make me a better developer.
 
-Feel free to use the E-collect as you wish, either to study or make improvementes!
+Feel free to use the CloneFlix as you wish, either to study or make improvementes!
 
 # :rocket: Features 
 - :blue_book: The [The movie db API](https://www.themoviedb.org/documentation/api) provides all the films and tv shows information.
