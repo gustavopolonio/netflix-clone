@@ -20,11 +20,10 @@ export function TopBar() {
         </a>
         
         <div className="topBarPagesContainer">
-          <a href="/">Início</a>
-          <a href="/tvshows">Séries</a>
-          <a href="/movies">Filmes</a>
-          <a href="/recentlyadd">Adicionados Recentemente</a>
-          <a href="/mylist">Minha Lista</a>
+          <a href="/tvshows">TV Shows</a>
+          <a href="/movies">Movies</a>
+          <a href="/recentlyadd">Recently Added</a>
+          <a href="/mylist">My List</a>
         </div>
       </div>
         

@@ -1,6 +1,6 @@
 const apiKey = "45c1ee397cdd7ac2f2c212d37968c37b";
 const apiBaseURL = "https://api.themoviedb.org/3";
-const apiLanguage = "&language=pt-BR";
+const apiLanguage = "&language=en_us";
 
 async function requestApi(endpoint) {
 	let url = await fetch(`${apiBaseURL}${endpoint}`);
@@ -14,43 +14,43 @@ export async function getHomeList() {
 
 	return [
 		{
-			title: "Séries mais vistas",
+			title: "Most seen TV Shows",
 			slug: "mostSeenTvShow",
 			list: await requestApi(`/discover/tv?api_key=${apiKey}${apiLanguage}&with_networks=213`)
 		},
 
 		{
-			title: "Aclamados pela crítica",
+			title: "Popular on Netflix",
 			slug: "criticallyAcclaimed",
 			list: await requestApi(`/movie/top_rated?api_key=${apiKey}${apiLanguage}`)
 		},
 
 		{
-			title: "Em alta",
+			title: "Trending",
 			slug: "Trending",
 			list: await requestApi(`/trending/all/week?api_key=${apiKey}${apiLanguage}`)
 		},
 
 		{
-			title: "Ação",
+			title: "Action",
 			slug: "action",
 			list: await requestApi(`/discover/movie?api_key=${apiKey}${apiLanguage}&with_genres=28`)
 		},
 
 		{
-			title: "Aventura",
+			title: "Adventure",
 			slug: "adventure",
 			list: await requestApi(`/discover/movie?api_key=${apiKey}${apiLanguage}&with_genres=12`)
 		},
 
 		{
-			title: "Comédia",
+			title: "Comedy",
 			slug: "comedy",
 			list: await requestApi(`/discover/movie?api_key=${apiKey}${apiLanguage}&with_genres=35`)
 		},
 
 		{
-			title: "Documentário",
+			title: "Documentary",
 			slug: "Documentary",
 			list: await requestApi(`/discover/movie?api_key=${apiKey}${apiLanguage}&with_genres=99`)
 		}

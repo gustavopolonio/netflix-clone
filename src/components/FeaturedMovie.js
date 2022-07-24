@@ -4,6 +4,7 @@ import ThumbUpOutlinedIcon from '@material-ui/icons/ThumbUpOutlined';
 import ThumbDownOutlinedIcon from '@material-ui/icons/ThumbDownOutlined';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import AddIcon from '@material-ui/icons/Add';
+import InfoIcon from '@material-ui/icons/Info';
 
 import '../styles/components/FeaturedMovie.css';
 
@@ -37,7 +38,7 @@ export function FeaturedMovie({ featuredData }) {
 
 						<div className="subTitleContainer">
 							<div className="voteAverage">
-								<strong> {voteAverage} pontos</strong>
+								<strong> {voteAverage} points</strong>
 							</div>
 
 							<div className="releaseDate">
@@ -46,7 +47,7 @@ export function FeaturedMovie({ featuredData }) {
 
 							<div className="numberOfSeasonms">
 								<strong>
-									{numberOfSeasons} Temporada{numberOfSeasons === 1 ? "" : "s"}
+									{numberOfSeasons} Season{numberOfSeasons === 1 ? "" : "s"}
 								</strong>
 							</div>
 						</div>
@@ -63,25 +64,22 @@ export function FeaturedMovie({ featuredData }) {
 						<div className="buttonsContainer">
 							<button className="playButton">
 								<PlayArrowIcon style={{paddingRight:"0.2rem", fontSize: "1.8rem"}}/>
-								ASSISTIR
+								Play
 							</button>
 
 							<button className="favoriteButton">
 								<AddIcon style={{paddingRight: "0.2rem", fontSize: "1.8rem"}}/>
-								FAVORITAR
+								My List
 							</button>
 							
-							<div className="likeContainer">
-								<ThumbUpOutlinedIcon className="like"/>
-							</div>
-							
-							<div className="unLikeContainer">
-								<ThumbDownOutlinedIcon className="unlike"/>
-							</div>
+							<button className="moreInfoButton">
+								<InfoIcon />
+							</button>
+
 						</div>
 
 						<div className="genres">
-							<strong>Gênero{countGenres > 1 ? "s" : ""}: </strong>
+							<strong>Genre{countGenres > 1 ? "s" : ""}: </strong>
 
 							{genres.map((item, key) => 
 								<div className="genresName" key={key}>

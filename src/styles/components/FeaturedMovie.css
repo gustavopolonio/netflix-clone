@@ -86,7 +86,7 @@
 
 .buttonsContainer .favoriteButton {
   border: 1px solid var(--grey);
-  margin-right: 1.4rem;
+  margin-right: 0.8rem;
   background: black;
   transition: all 0.2s;
 }
@@ -95,30 +95,22 @@
   opacity: 0.8;
 }
 
-.likeContainer,
-.unLikeContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.moreInfoButton {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background-color: transparent;
 
-  border-radius: 50%;
-  border: 1.6px solid white;
-
-  padding: 0.5rem;
-  margin-right: 0.6rem;
-  
-  cursor: pointer;
-  transition: all ease 0.2s;
+  transition: filter 0.2s;
 }
 
-.likeContainer:hover,
-.unLikeContainer:hover {
-  opacity: 0.7;
+.moreInfoButton:hover {
+  filter: brightness(0.8);
 }
 
-.buttonsContainer .like,
-.buttonsContainer .unlike {
-  font-size: 1.6rem;
+.moreInfoButton svg {
+  width: 24px;
+  height: auto;
 }
 
 .genres {
