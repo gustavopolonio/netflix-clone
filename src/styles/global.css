@@ -41,6 +41,10 @@ a {
     color: inherit;
 }
 
+ul {
+    list-style-type: none;
+}
+
 
 .filmLists {
     margin-top: -120px;

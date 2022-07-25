@@ -84,11 +84,102 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.arrowDropDownIcon {
+  transition: 0.3s !important;
 }
 
 .avatarContainer img {
   width: 2rem;
+  cursor: pointer;
 }
+
+.avatarContainer:hover > svg {
+  transform: rotate(180deg);
+}
+
+.avatarContainer:hover .avatarDropDown {
+  visibility: visible;
+  opacity: 1;
+}
+
+.avatarDropDown {
+  visibility: hidden;
+  opacity: 0;
+
+  position: absolute;
+  top: 180%;
+  right: 0;
+  width: 194px;
+  background: rgba(0, 0, 0, 0.9);
+
+  transition: 0.3s;
+}
+
+.avatarDropDown > svg {
+  transform: rotate(180deg);
+  position: absolute;
+  bottom: 97%;
+  width: 100%;
+  padding-right: 111px;
+  height: 35px;
+}
+
+.avatarProfilesContainer,
+.avatarConfigsContainer,
+.logOutContainer {
+  padding: 16px 12px;
+  cursor: pointer;
+}
+
+.avatarProfilesContainer > li,
+.manageProfiles,
+.accountContainer,
+.helpCenterContainer {
+  display: flex;
+  align-items: center ;
+}
+
+.avatarProfile,
+.accountContainer {
+  margin-bottom: 12px;
+}
+
+.avatarProfile img {
+  border-radius: 6px;
+}
+
+.avatarProfile span,
+.manageProfiles span,
+.accountContainer span,
+.helpCenterContainer span {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.manageProfiles svg,
+.accountContainer svg,
+.helpCenterContainer svg {
+  width: 32px;
+  height: 20px;
+}
+
+.avatarConfigsContainer {
+  border-top: 1px solid var(--grey);
+  border-bottom: 1px solid var(--grey);
+}
+
+.logOutContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.logOutContainer span {
+   font-size: 14px;
+}
+
 
 .netflixLogo:hover,
 .topBarPagesContainer a:hover,
