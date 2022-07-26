@@ -15,7 +15,7 @@
 
 # :book: About this Project
 
-CloneFlix is a web Netflix clone with details very similar to the original platform. Like my focus was in recreate the original interface, there aren't many funcionalities. You can check out this project in action clicking [here](https://cloneflix-8a636.web.app/).
+CloneFlix is a web Netflix clone with details very similar to the original platform. Like my focus was in recreate the original interface, there aren't many funcionalities. You can check out this project in action clicking [here](https://cloneflix-nine.vercel.app/).
 
 This project is part of my personal portfolio, so I would appreciate if you provide me any feedback about the ideia, code, structure or anything you could 
 report to make me a better developer.
