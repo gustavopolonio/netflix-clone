@@ -74,6 +74,10 @@
   transition: all ease 0.2s;
 }
 
+.buttonsContainer button span {
+  margin-left: 6px;
+}
+
 .playButton {
   background: var(--red);
   margin-right: 1rem;
@@ -84,33 +88,15 @@
   opacity: 0.8;
 }
 
-.buttonsContainer .favoriteButton {
+.buttonsContainer .moreInfoButton {
   border: 1px solid var(--grey);
   margin-right: 0.8rem;
   background: black;
   transition: all 0.2s;
 }
 
-.favoriteButton:hover {
-  opacity: 0.8;
-}
-
-.moreInfoButton {
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  background-color: transparent;
-
-  transition: filter 0.2s;
-}
-
 .moreInfoButton:hover {
-  filter: brightness(0.8);
-}
-
-.moreInfoButton svg {
-  width: 24px;
-  height: auto;
+  opacity: 0.8;
 }
 
 .genres {
@@ -124,4 +110,21 @@
   margin-left: 0.3rem;
   font-size: 1.1rem;
   color: var(--grey);
+}
+
+
+@media (max-width: 1120px) {
+  .uiX {
+    background: linear-gradient(to right, #111 25%, transparent 95%);
+  }
+
+  .featuredMovieDataContainer {
+    width: 60%;
+  }
+}
+
+@media (max-width: 720px) {
+  .featuredMovieContainer {
+    display: none;
+  }
 }

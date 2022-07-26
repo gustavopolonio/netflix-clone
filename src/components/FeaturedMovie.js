@@ -1,16 +1,12 @@
 import React from 'react';
-
-import ThumbUpOutlinedIcon from '@material-ui/icons/ThumbUpOutlined';
-import ThumbDownOutlinedIcon from '@material-ui/icons/ThumbDownOutlined';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import AddIcon from '@material-ui/icons/Add';
-import InfoIcon from '@material-ui/icons/Info';
+import { BiInfoCircle } from "react-icons/bi"
 
 import '../styles/components/FeaturedMovie.css';
 
 export function FeaturedMovie({ featuredData }) {
 	let title = featuredData.name;
-	let voteAverage = featuredData.vote_average;
+	let voteAverage = Math.round(featuredData.vote_average * 100) / 100;
 	let releaseDate = featuredData.first_air_date;
 	let numberOfSeasons = featuredData.number_of_seasons;
 	let description = featuredData.overview;
@@ -64,16 +60,12 @@ export function FeaturedMovie({ featuredData }) {
 						<div className="buttonsContainer">
 							<button className="playButton">
 								<PlayArrowIcon style={{paddingRight:"0.2rem", fontSize: "1.8rem"}}/>
-								Play
+								<span>Play</span>
 							</button>
 
-							<button className="favoriteButton">
-								<AddIcon style={{paddingRight: "0.2rem", fontSize: "1.8rem"}}/>
-								My List
-							</button>
-							
 							<button className="moreInfoButton">
-								<InfoIcon />
+								<BiInfoCircle style={{paddingRight: "0.2rem", fontSize: "1.8rem"}} />
+								<span>More infos</span>
 							</button>
 
 						</div>

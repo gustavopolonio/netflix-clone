@@ -63,3 +63,19 @@
 .filmListItem img:hover {
   transform: scale(1);
 }
+
+@media (max-width: 720px) {
+  .navigateBack ,
+  .navigateFront {
+    display: none;
+  }
+
+  .filmList {
+    margin-left: 1rem;
+  }
+
+  .filmListAreaScreen {
+    overflow-x: scroll;
+    padding-right: 1rem;
+  }
+}

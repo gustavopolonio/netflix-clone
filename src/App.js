@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getHomeList, getFeaturedData } from './Tmdb';
+import { getHomeList, getFeaturedData, getNotificationData } from './Tmdb';
 
 import { MovieRow } from './components/MovieRow';
 import { FeaturedMovie } from './components/FeaturedMovie';
@@ -11,6 +11,7 @@ export default () => {
   
 	const [infoList, setInfoList] = useState([]);
 	const [featuredInfo, setFeaturedInfo] = useState(null);
+	const [notificationInfo, setNotificationInfo] = useState(null);
 
 	useEffect(() => {
 		async function loadAllLists() {
@@ -24,6 +25,9 @@ export default () => {
 
 			let featureData = await getFeaturedData(featuredTvShow.id, "tvShow");
 			setFeaturedInfo(featureData);
+
+			let notificationData = await getNotificationData()
+			setNotificationInfo(notificationData)
 		}
 
 		loadAllLists();
@@ -33,9 +37,11 @@ export default () => {
 	return (
 		<div className="pageHome">
 			
-			<TopBar />
+			{ notificationInfo && 
+				<TopBar notificationData={ notificationInfo } />
+			}
 
-			{featuredInfo && 
+			{ featuredInfo && 
 				<FeaturedMovie featuredData={ featuredInfo } />
 			}
 

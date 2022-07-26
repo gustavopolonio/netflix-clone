@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import CloseIcon from '@material-ui/icons/Close';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { BsPencilFill, BsPerson } from "react-icons/bs"
 import { BiHelpCircle } from "react-icons/bi"
+import { GiHamburgerMenu } from "react-icons/gi"
 
 import netflixLogoImg from '../assets/netflix-logo.svg';
 import netflixAvatarImg from '../assets/netflix-avatar.png';
@@ -13,13 +15,61 @@ import netflixAvatar3Img from '../assets/netflix-avatar3.png';
 
 import '../styles/components/TopBar.css';
 
+export function TopBar({ notificationData }) {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
-export function TopBar() {
+  function toggleMenuSideBar() {
+    isSidebarOpen ? setIsSidebarOpen(false) : setIsSidebarOpen(true)
+  }
 
   return (
     <div className="topBarContainer">
       <div className="leftContainer">
-          
+        <GiHamburgerMenu onClick={() => toggleMenuSideBar()} style={{
+          width: '32px',
+          height: 'auto'
+        }} />
+
+        <nav className={isSidebarOpen ? `menuSidebar open` : `menuSidebar`}>
+          <ul className="sidebarTop">
+            <div className="userInfo">
+              <img src={netflixAvatarImg} alt="Avatar" />
+              <div>
+                <span>Gustavo Polonio</span>
+                <button>Switch profile</button>
+              </div>
+            </div>
+            <li>Account</li>
+            <li>Help Center</li>
+            <li>Log out Netflix</li>
+          </ul>
+
+          <ul className="sidebarBottom">
+            <li class="active">Home</li>
+            <li>My list</li>
+            <li>Thrillers</li>
+            <li>For the while family</li>
+            <li>Foreigners TV shows and movies</li>
+            <li>Reality shows</li>
+            <li>LGBTQ stories</li>
+            <li>Anime</li>
+            <li>Action</li>
+            <li>Comedy</li>
+            <li>Fantasy</li>
+            <li>Science fiction</li>
+            <li>Horror</li>
+            <li>Stand-up comedy</li>
+          </ul>
+        </nav>
+
+        <div 
+          className={isSidebarOpen ? 'sidebarOverlay' : ''}
+          onClick={() => toggleMenuSideBar()}
+          style={{
+            display: 'none'
+          }}
+        ></div>
+
         <a href="/">
           <img src={netflixLogoImg} alt="Netflix logo" className="netflixLogo"/>
         </a>
@@ -36,11 +86,34 @@ export function TopBar() {
       <div className="rightContainer">
         <div className="searchContainer">
           <SearchIcon className="searchIcon" style={{transition: "0.2s"}}/>
-          <input type="text" ></input>
+          <input type="text" placeholder='Buscar'></input>
           <CloseIcon className="closeIcon" style={{transition: "0.2s"}}/>
         </div>
 
-        <NotificationsIcon className="notificationIcon"style={{transition: "0.2s"}}/>
+        <div className="notificationsContainer">
+          <NotificationsIcon className="notificationIcon"style={{transition: "0.2s"}}/>
+
+          <ArrowDropDownIcon className="notificationsArrowDown" />
+          <ul className="notificationsDropDown">
+            { notificationData.map(notification => 
+              <li key={notification.id} className="notificationItem">
+                <img 
+                  src={`https://image.tmdb.org/t/p/original${notification.backdrop_path}`} 
+                  alt={notification.title} 
+                />
+
+                <div className="notificationRightSide">
+                  <p>
+                    New
+                    <br />
+                    {notification.title}  
+                  </p>
+                  <span>1 month ago</span>
+                </div>
+              </li>
+            ) }
+          </ul>
+        </div>
         
         <div className="avatarContainer">
           <img src={netflixAvatarImg} alt="Avatar"/>
@@ -52,17 +125,17 @@ export function TopBar() {
             <ul className="avatarProfilesContainer">
               <li className="avatarProfile">
                 <img src={netflixAvatar1Img} alt="Avatar 1" />
-                <span>Cris</span>
+                <span>Clarinha</span>
               </li>
 
               <li className="avatarProfile">
                 <img src={netflixAvatar2Img} alt="Avatar 2" />
-                <span>Leo/Alê</span>
+                <span>Gugs</span>
               </li>
 
               <li className="avatarProfile">
                 <img src={netflixAvatar3Img} alt="Avatar 3" />
-                <span>Lucas</span>
+                <span>Ronaldo</span>
               </li>
 
               <div className="manageProfiles">

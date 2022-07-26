@@ -15,6 +15,11 @@
   z-index: 999;
 }
 
+.menuSidebar,
+.leftContainer > svg {
+  display: none;
+}
+
 .leftContainer {
   display: flex;
   align-items: center;
@@ -75,9 +80,76 @@
   cursor: pointer;
 }
 
-.notificationIcon {
+.notificationsContainer {
+  position: relative;
   margin-right: 24px;
+}
+
+.notificationsContainer:hover .notificationsDropDown,
+.notificationsContainer:hover .notificationsArrowDown {
+  opacity: 1;
+  visibility: visible;
+}
+
+.notificationIcon {
   cursor: pointer;
+}
+
+.notificationsArrowDown {
+  opacity: 0;
+  visibility: hidden;
+
+  position: absolute;
+  transform: rotate(180deg);
+  top: 98%;
+  right: -16px;
+  width: 380px !important;
+  height: 24px !important;
+  padding-right: 326px;
+
+  transition: 0.2s !important;
+}
+
+.notificationsDropDown {
+  opacity: 0;
+  visibility: hidden;
+
+  position: absolute;
+  top: 175%;
+  right: -16px;
+  width: 380px;
+  background: rgba(0, 0, 0, 0.9);
+  max-height: 538px;
+  overflow-y: scroll;
+
+  transition: 0.2s;
+}
+
+.notificationItem {
+  display: flex;
+  align-items: center;
+  padding: 18px;
+}
+
+.notificationItem+.notificationItem {
+  border-top: 1px solid var(--grey);
+}
+
+.notificationItem > img {
+  width: 150px;
+}
+
+.notificationRightSide {
+  margin-left: 16px;
+}
+
+.notificationRightSide p {
+  color: var(--grey);
+}
+
+.notificationRightSide span {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 12px;
 }
 
 .avatarContainer {
@@ -186,6 +258,166 @@
 .searchIcon:hover,
 .closeIcon:hover,
 .notificationIcon:hover,
-.arrowDropDownIcon:hover {
+.arrowDropDownIcon:hover,
+.avatarProfile:hover,
+.manageProfiles:hover,
+.accountContainer:hover,
+.helpCenterContainer:hover,
+.logOutContainer:hover {
   opacity: 0.8;
+}
+
+
+
+@media (max-width: 1120px) {
+  .topBarPagesContainer a:nth-child(4) {
+    display: none;
+  }
+}
+
+@media (max-width: 960px) {
+  .topBarContainer {
+    padding: 1rem;
+  }
+
+  .topBarPagesContainer {
+    margin-left: 36px;
+  }
+
+  .searchContainer {
+    margin-right: 24px;
+  }
+
+  .searchContainer input {
+    width: 140px;
+  }
+
+  .topBarPagesContainer a:nth-child(1),
+  .searchIcon,
+  .closeIcon {
+    display: none !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .menuSidebar,
+  .leftContainer > svg {
+    display: block;
+  }
+
+  .topBarPagesContainer,
+  .notificationsContainer,
+  .avatarContainer {
+    display: none;
+  }
+
+  .leftContainer > a {
+    margin-left: 20px;
+  }
+
+  .searchContainer {
+    margin-right: 0;
+  }
+
+  .menuSidebar {
+    position: fixed;
+    left: -300px;;
+    top: 48px;
+    background: black;
+    z-index: 1; 
+
+    transition: 0.3s;
+  }
+
+  .menuSidebar.open {
+    left: 0;
+  }
+
+  .sidebarTop,
+  .sidebarBottom {
+    padding: 1rem;
+  }
+
+  .sidebarTop {
+    border-bottom: 1px solid var(--grey);
+  }
+
+  .userInfo {
+    display: flex;
+  }
+
+  .userInfo > img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .userInfo > div {
+    margin-left: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    color: var(--grey);
+  }
+
+  .userInfo > div span {
+    font-weight: 700;
+  }
+
+  .userInfo > div button {
+    background: none;
+    border: 0;
+    color: var(--grey);
+    font-size: 12px;
+  }
+
+  .sidebarTop li,
+  .sidebarBottom li {
+    color: var(--grey);
+    font-weight: 700;
+  }
+
+  .sidebarTop li,
+  .sidebarBottom li+li {
+    margin-top: 16px;
+  }
+
+  .sidebarBottom {
+    max-height: calc(100vh - 48px - 150.2px);
+    overflow-y: scroll;
+  }
+
+  .sidebarBottom li.active {
+    color: white;
+    position: relative;
+  }
+  .sidebarBottom li.active::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 122%;
+    top: -4px;
+    left: -1rem;
+    background-color: red;
+  }
+
+  .sidebarOverlay {
+    display: block !important;
+    position: fixed;
+    top: 48px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 480px) {
+  .leftContainer > a {
+    margin-left: 16px;
+  }
+
+  .netflixLogo {
+    width: 100px;
+  }
 }

@@ -62,14 +62,6 @@ export async function getFeaturedData(id, type) {
 	
 	let featuredData = {};
 
-	// if(id) {
-	// 	if(type === "movie") {
-	// 		featuredData = await requestApi(`/movie/${id}?api_key=${apiKey}${apiLanguage}`)
-	// 	} else if(type === "tv") {
-	// 		featuredData = await requestApi(`/tv/${id}?api_key=${apiKey}${apiLanguage}`)
-	// 	}
-	// }
-
 	if(id) {
 		switch(type){
 			case 'movie':
@@ -85,4 +77,10 @@ export async function getFeaturedData(id, type) {
 	}
 
 	return featuredData
+}
+
+export async function getNotificationData() {
+	const { results } = await requestApi(`/movie/upcoming?api_key=${apiKey}${apiLanguage}`)
+	const response = results.slice(0, 6)
+	return response
 }

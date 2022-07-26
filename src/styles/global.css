@@ -1,69 +1,81 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
 :root {
-    --red: #E50914;
-    --grey: #999;
+	--red: #E50914;
+	--grey: #999;
 }
 
 @media(max-width: 1080px) {
-    html {
-        font-size: 93.75%;
-    }
+	html {
+		font-size: 93.75%;
+	}
 }
 
 @media(max-width: 720px) {
-    html {
-        font-size: 87.5%;
-    }
+	html {
+		font-size: 87.5%;
+	}
+}
+
+@media (max-width: 480px) {
+	html {
+		font-size: 81.25%;
+	}
 }
 
 body {
-    color: white;
-    background: #111;
+	color: white;
+	background: #111;
 }
 
 body, input, textarea, button {
-    font: 400 16px "Roboto", sans-serif;
+	font: 400 16px "Roboto", sans-serif;
 }
 
 button {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 ul {
-    list-style-type: none;
+	list-style-type: none;
 }
 
 
 .filmLists {
-    margin-top: -120px;
+	margin-top: -120px;
 }
 
 .loading {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-    background: black;
+	background: black;
 }
 
 .loading img {
-    width: 600px;
+	width: 600px;
+}
+
+@media (max-width: 720px) {
+	.filmLists {
+		margin-top: 66px;
+	}
 }
