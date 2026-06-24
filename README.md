@@ -3,7 +3,7 @@
 <p align="center">
    <img src="https://github.com/gustavopolonio/netflix-clone/blob/main/.github/web1.png" width="700"/>
    <img src="https://github.com/gustavopolonio/netflix-clone/blob/main/.github/web2.png" width="700"/>
-   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Nnx1MqGZtPw6yjC91zKmbstWy42393L_KMDWbxj-tw&s=10" />
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Nnx1MqGZtPw6yjC91zKmbstWy42393L_KMDWbxj-tw&s=10" width="2000" />
 </p>
 
 # :pushpin: Table of Contents
